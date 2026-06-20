@@ -1,0 +1,139 @@
+* {
+    border-box: box-sizing;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: "Fraunces", "Montserrat", "Sans-serif";
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 38%, 92%);
+    
+}
+
+.perfume {
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+    max-width: 27rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    overflow: hidden; /* First time I used this CSS trick, It will take take of the Image borders automaticly! */
+    
+}
+
+.perfume__img {
+    width: 100%;
+
+}
+
+.perfume__content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.perfume__label {
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: hsl(228, 12%, 48%);
+    font-size: 0.9rem;
+}
+
+.perfume__title {
+    font-size: 2.5rem;
+}
+
+.perfume__text {
+    font-family: "Montserrat";
+    color: hsl(228, 12%, 48%);
+    font-size: 1.2rem;
+}
+
+.perfume__price {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.perfume__new-price {
+    font-size: 2rem;
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+}
+
+.perfume__old-price {
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+
+.card__cart {
+    font-family: "Montserrat";
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+
+.card__cart:active {
+    background-color: hsl(158, 42%, 18%);
+    cursor: pointer;
+}
+
+.card__cart::before {
+    position: relative;
+    top: 0.2rem;
+    right: 0.3rem;
+    content: url("images/icon-cart.svg");
+    height: 0.5rem;
+    width: 0.5rem;
+
+}
+
+@media (min-width: 1440px) {
+    .perfume {
+        max-width: 57rem;
+        width: 100%;
+        display: flex;
+        height: 100%;
+    } 
+    .perfume__picture, 
+    .perfume__content {
+        flex: 1;
+        width: 50%;
+    }
+    .perfume__img {
+        max-width: 27rem;
+        height: 100%;
+        object-fit: cover;
+    
+    }
+    .perfume__content {
+        gap: 2rem;
+        justify-content: space-between;
+        max-width: 27rem;
+        padding: 2.5rem 3rem;
+    }
+    .perfume__title {
+    font-size: 3.5rem;
+}
+.perfume__text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+.perfume__new-price {
+    font-size: 3rem;
+}
+    }
